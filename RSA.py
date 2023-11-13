@@ -110,7 +110,7 @@ while True:
                 # Memanggil fungsi encrypt_photo dengan input file dan kunci publik yang diberikan
                 ciphertext = encrypt_photo(input_file, public_key)
                 # Membuat nama output file dengan menambahkan ekstensi .enc ke input file
-                output_file = input_file + ".nas"
+                output_file = input_file + ".enc"
                 # Membuka output file dalam mode biner
                 with open(output_file, "wb") as f:
                     # Menulis ciphertext ke output file
@@ -143,7 +143,7 @@ while True:
                 # Memanggil fungsi decrypt_photo dengan ciphertext dan kunci privat yang diberikan
                 data = decrypt_photo(ciphertext, private_key)
                 # Membuat nama output file dengan menghapus ekstensi .enc dari input file
-                output_file = input_file.replace(".nas", "")
+                output_file = input_file.replace(".enc", "")
                 # Membuka output file dalam mode biner
                 with open(output_file, "wb") as f:
                     # Menulis data biner yang telah didekripsi ke output file
